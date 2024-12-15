@@ -271,7 +271,6 @@ class TreeGraphEulerTour(Scene):
         lt, rt = t.eulerSplit(0.5,5.5)
         euler_tour_nodes_copy = euler_tour_nodes.copy()
         euler_tour_nodes_copy.insert(0,-1)
-        print(t.getEdges(),euler_tour_nodes_copy,"0qiwejqpwkeoiqwepoiqe")
         left_tree_graph = createManimTree(lt,euler_tour_nodes[6:],lt.getEdgesDi()).shift(LEFT * 2)
         right_tree_graph = createManimTree(rt,euler_tour_nodes[1:6],rt.getEdgesDi()).shift(RIGHT * 2)
         self.play(ReplacementTransform(root_tree_graph,updated_tree_graph))
